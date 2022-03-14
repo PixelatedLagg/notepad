@@ -35,5 +35,8 @@ function Save()
 {
     var blob = new Blob([area.value], { type: "text/plain;charset=utf-8" });
     let name = prompt('Name of the file:', "");
-    saveAs(blob, `${name}.txt`);
+    if (name != "" && name !== null)
+    {
+        saveAs(blob, `${name}.txt`);
+    }
 }
